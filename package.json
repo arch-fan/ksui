@@ -1,0 +1,29 @@
+{
+	"name": "ksui",
+	"version": "0.0.1",
+	"description": "Schema validator library type-friendly with TypeScript, also available for JavaScript.",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsup",
+		"test": "vitest",
+		"test:ci": "vitest run",
+		"lint": "biome check --write ."
+	},
+	"keywords": [],
+	"author": "arch-fan",
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"tsup": "8.3.5",
+		"typescript": "5.7.2",
+		"vitest": "2.1.8"
+	},
+	"packageManager": "pnpm@9.0.0",
+	"files": ["dist"],
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js"
+		}
+	}
+}
