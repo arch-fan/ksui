@@ -1,5 +1,5 @@
 {
-	"name": "ksui",
+	"name": "@arch-fan/ksui",
 	"version": "0.0.1",
 	"description": "Schema validator library type-friendly with TypeScript, also available for JavaScript.",
 	"main": "dist/index.js",
