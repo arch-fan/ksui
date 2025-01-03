@@ -1,8 +1,9 @@
 {
 	"name": "@arch-fan/ksui",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Schema validator library type-friendly with TypeScript, also available for JavaScript.",
 	"main": "dist/index.js",
+	"type": "module",
 	"scripts": {
 		"build": "tsup",
 		"test": "vitest",
@@ -25,5 +26,8 @@
 			"import": "./dist/index.mjs",
 			"require": "./dist/index.js"
 		}
+	},
+	"dependencies": {
+		"vite-tsconfig-paths": "^5.1.4"
 	}
 }

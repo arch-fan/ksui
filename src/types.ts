@@ -1,5 +1,6 @@
 export type BaseSchema<T> = {
 	_check: (data: unknown) => data is T;
+	_errorMsg?: string;
 };
 
 export type ParseResult<T> =

@@ -2,11 +2,12 @@ import type { BaseSchema, ParseResult } from "~/types";
 
 export const parse = <T>(
 	schema: BaseSchema<T>,
-	val: unknown,
+	// biome-ignore lint/complexity/noBannedTypes: Maintain autocomplete, but no effect on type checking
+	val: T | {},
 ): ParseResult<T> => {
 	if (schema._check(val)) {
 		return { data: val };
 	}
 
-	return { error: "Invalid data" };
+	return { error: schema._errorMsg ?? "Invalid value" };
 };

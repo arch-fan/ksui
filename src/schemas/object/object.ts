@@ -1,15 +1,17 @@
 import type { BaseSchema } from "~/types";
 
-export const object = <
-	T extends Record<string, BaseSchema<unknown>>,
-	U = {
-		[K in keyof T]: T[K] extends BaseSchema<infer U> ? U : never;
-	},
->(
+export const object = <T extends Record<string, BaseSchema<unknown>>>(
 	keyval: T,
-): BaseSchema<U> => {
+	err?: string,
+): BaseSchema<{
+	[K in keyof T]: T[K] extends BaseSchema<infer B> ? B : never;
+}> => {
 	return {
-		_check: (data): data is U => {
+		_check: (
+			data,
+		): data is {
+			[K in keyof T]: T[K] extends BaseSchema<infer B> ? B : never;
+		} => {
 			if (typeof data !== "object") return false;
 			if (!data) return false;
 			for (const key in keyval) {
@@ -19,5 +21,6 @@ export const object = <
 			}
 			return true;
 		},
+		_errorMsg: err,
 	};
 };
