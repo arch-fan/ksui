@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      vite-tsconfig-paths:
-        specifier: ^5.1.4
-        version: 5.1.4(typescript@5.7.2)(vite@5.4.11)
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -21,6 +17,9 @@ importers:
       typescript:
         specifier: 5.7.2
         version: 5.7.2
+      vite-tsconfig-paths:
+        specifier: ^5.1.4
+        version: 5.1.4(typescript@5.7.2)(vite@5.4.11)
       vitest:
         specifier: 2.1.8
         version: 2.1.8
