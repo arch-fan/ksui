@@ -1,3 +1,3 @@
 export * from "./schemas";
 export * from "./validator";
-export * from "./types";
+export type * from "./types";
