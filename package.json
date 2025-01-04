@@ -1,8 +1,7 @@
 {
 	"name": "@arch-fan/ksui",
 	"version": "0.0.2",
-	"description": "Schema validator library type-friendly with TypeScript, also available for JavaScript.",
-	"main": "dist/index.js",
+	"description": "From now on, your favorite schema validator library type-friendly with TypeScript, also available for JavaScript.",
 	"type": "module",
 	"scripts": {
 		"build": "tsup",
